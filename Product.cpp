@@ -1,0 +1,9 @@
+#include "Product.h"
+
+Product::Product(std::string name, double price)
+    : m_name(std::move(name)), m_price(price) {}
+
+Product::~Product() = default;
+
+std::string Product::getName() const { return m_name; }
+double Product::getPrice() const { return m_price; }
